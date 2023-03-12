@@ -1,0 +1,1 @@
+﻿CREATE OR REPLACE FUNCTION unit_test.end_test_case(IN in_test_suite character varying,IN in_test_case character varying) RETURNS voidAS$body$BEGIN	UPDATE unit_test.results SET		done = true	WHERE test_suite = in_test_suite AND test_case = in_test_case;		END;$body$    LANGUAGE plpgsql;

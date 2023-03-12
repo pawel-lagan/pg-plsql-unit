@@ -1,0 +1,1 @@
+﻿CREATE OR REPLACE FUNCTION unit_test.pass() RETURNS voidAS$body$BEGIN	PERFORM unit_test._exec('UPDATE unit_test.results SET		test_count = test_count +1	WHERE done = false');END;$body$    LANGUAGE plpgsql;
